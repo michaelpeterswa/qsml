@@ -1,0 +1,13 @@
+{
+    "project": [
+        {
+            "author": "Michael Peters",
+            "projectName": "qsml",
+            "version": "1.0.0",
+            "description": "qsml is a markup language for key value securities (stock name, amount)",
+            "longDescription": "quick securities markup language is a project geared towards listing portfolios for performing data analysis upon",
+            "githubLink": "https://github.com/michaelpeterswa/qsml",
+            "date": "06.25.2020"
+        }
+    ]
+}
