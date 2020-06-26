@@ -1,7 +1,6 @@
 COMMENT ::  this is a test comment 
 STAR :: *
 TEXT :: groupname
-STAR :: *
 DOLLAR :: $
 TEXT :: GOOG
 COLON :: :

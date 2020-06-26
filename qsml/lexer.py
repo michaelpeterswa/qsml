@@ -2,8 +2,8 @@
 # Lexer Class
 # michaelpeterswa 2020
 
-import token
-import error
+from .token import *
+from .error import QSMLError
 
 
 class Lexer(object):
@@ -33,19 +33,19 @@ class Lexer(object):
         peekValue = self.__peek()
 
         if peekValue == "":
-            return token.Token(token.EOS, "", self.line)
+            return Token(EOS, "", self.line)
 
         elif peekValue.isdigit():
             curr_val = ""
             while self.__peek().isdigit():
                 curr_val += self.__read()
-            return token.Token(token.VALUE, curr_val, self.line)
+            return Token(VALUE, curr_val, self.line)
 
         elif peekValue.isalpha():
             curr_val = self.__read()  # at least one letter
             while self.__peek().isalpha() or self.__peek() == ".":
                 curr_val += self.__read()
-            return token.Token(token.TEXT, curr_val, self.line)
+            return Token(TEXT, curr_val, self.line)
 
         elif self.__comment_start(peekValue):
             comment = ""
@@ -53,20 +53,20 @@ class Lexer(object):
             while self.__peek() != ">":
                 comment += self.__read()
             self.__read()
-            return token.Token(token.COMMENT, comment, self.line)
+            return Token(COMMENT, comment, self.line)
 
         elif peekValue in self.symbols:
             if peekValue == "*":
                 self.__read()
-                return token.Token(token.STAR, "*", self.line)
+                return Token(STAR, "*", self.line)
             elif peekValue == "$":
                 self.__read()
-                return token.Token(token.DOLLAR, "$", self.line)
+                return Token(DOLLAR, "$", self.line)
             elif peekValue == ":":
                 self.__read()
-                return token.Token(token.COLON, ":", self.line)
+                return Token(COLON, ":", self.line)
             else:
-                raise error.QSMLError(
+                raise QSMLError.QSMLError(
                     "unknown error occured - symbol mismatch", self.line
                 )
 

@@ -1,8 +1,3 @@
-# Q S M L
-# Parrser Runner Program
-# michaelpeterswa 2020
-
-
 import qsml
 import sys
 
