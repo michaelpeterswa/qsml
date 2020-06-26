@@ -5,17 +5,21 @@
 from .token import *
 from .lexer import Lexer
 from .error import QSMLError
+from .builder import Builder
 
 
 class Parser(object):
     def __init__(self, lexer):
         self.lexer = lexer
         self.current_token = None
+        self.builder = Builder()
+        self.current_group = None
 
     def parse(self):
         self.__advance()
         self.__enter()
         self.__eat(EOS, "expected EOS")
+        return self.builder.get_data()
 
     def __advance(self):
         self.current_token = self.lexer.next_token()
@@ -51,11 +55,20 @@ class Parser(object):
 
     def __group(self):
         self.__eat(STAR, "expected *")
+        self.builder.set_group(self.current_token.lexeme)
+        self.current_group = self.current_token.lexeme
         self.__eat(TEXT, "expected TEXT")
         self.__eat(STAR, "expected *")
 
     def __kvp(self):
+        grp = self.current_group
         self.__eat(DOLLAR, "expected $")
+
+        stock = self.current_token.lexeme
         self.__eat(TEXT, "expected TEXT")
         self.__eat(COLON, "expected COLON")
+
+        shares = self.current_token.lexeme
         self.__eat(VALUE, "expected VALUE")
+
+        self.builder.add_to_group(grp, stock, shares)

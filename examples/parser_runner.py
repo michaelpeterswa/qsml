@@ -1,5 +1,5 @@
 # Q S M L
-# Parrser Runner Program
+# Parser Runner Program
 # michaelpeterswa 2020
 
 

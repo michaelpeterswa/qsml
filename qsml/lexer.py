@@ -75,4 +75,4 @@ class Lexer(object):
             return self.next_token()
 
         else:
-            raise error.QSMLError("unknown error occurred (end)", self.line)
+            raise QSMLError("unknown error occurred (end)", self.line)
