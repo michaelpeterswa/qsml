@@ -11,18 +11,15 @@ import sys
 
 def load(filename=None):
     try:
-        file_stream = open(filename, "r")
-        lexer_obj = Lexer(file_stream)
-        parser_obj = Parser(lexer_obj)
+        with open(filename, "r") as file_stream:
+            lexer_obj = Lexer(file_stream)
+            parser_obj = Parser(lexer_obj)
+            return parser_obj.parse()
 
-        print(parser_obj.parse())
-
-        file_stream.close()
     except FileNotFoundError:
         sys.exit("invalid filename %s" % filename)
     except QSMLError as e:
-        file_stream.close()
-        sys.exit(e)
+        raise e
 
 
 def dump(self, filename):

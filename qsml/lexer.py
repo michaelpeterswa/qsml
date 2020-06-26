@@ -50,8 +50,12 @@ class Lexer(object):
         elif self.__comment_start(peekValue):
             comment = ""
             self.__read()  # eat preliminary <
-            while self.__peek() != ">":
+            while self.__peek() != ">" and self.__peek() != "\n":
                 comment += self.__read()
+            if self.__peek() == "\n":
+                raise QSMLError(
+                    "comment must be single line, missing closing >", self.line
+                )
             self.__read()
             return Token(COMMENT, comment, self.line)
 

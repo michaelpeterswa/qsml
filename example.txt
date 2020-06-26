@@ -1,0 +1,4 @@
+Python dictionary returned by the parser using file (example.qsml):
+
+{   'myportfolio': {'AAPL': '5', 'BRK.B': '1', 'GOOG': '10'},
+    'test': {'MSFT': '5', 'SNAP': '130', 'TSLA': '100'}}
