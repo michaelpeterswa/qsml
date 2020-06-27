@@ -12,7 +12,7 @@ setuptools.setup(
     name="qsml",
     license="MIT",
     description="qsml is a markup language.",
-    version="v1.0.0",
+    version="v1.0.1",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/michaelpeterswa/qsml",

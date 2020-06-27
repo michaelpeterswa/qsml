@@ -6,6 +6,7 @@ from .token import *
 from .lexer import Lexer
 from .error import QSMLError
 from .parser import Parser
+from .dumperror import QSMLDumpError
 import sys
 
 
@@ -27,9 +28,18 @@ def dump(filename, dict_obj, title="QSML File v1.0"):
     with open(filename, "w+") as outfile:
         data = "< %s >\n\n" % title
         for group, collection in dict_obj.items():
-            data += "* %s *\n\n" % group
-            if collection:
-                for sym, amt in collection.items():
-                    data += "\t$ %s : %s\n" % (sym, amt)
-                data += "\n"
+            if isinstance(group, str):
+                data += "* %s *\n\n" % group
+                if collection:
+                    for sym, amt in collection.items():
+                        if isinstance(sym, str) and isinstance(amt, int):
+                            data += "\t$ %s : %s\n" % (sym, amt)
+                        else:
+                            raise QSMLDumpError(
+                                "Either symbol or amount is incorrectly formed"
+                            )
+                    data += "\n"
+            else:
+                raise QSMLDumpError("Group Name not String")
+
         outfile.write(data)

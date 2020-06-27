@@ -7,7 +7,7 @@ file = "example.qsml"
 
 retval = qsml.load(file)
 
-retval["myportfolio"].update({"NWST": 12})
+retval["myportfolio"].update({"NWST": "12"})
 
 qsml.dump("output.qsml", retval)
 

@@ -71,4 +71,4 @@ class Parser(object):
         shares = self.current_token.lexeme
         self.__eat(VALUE, "expected VALUE")
 
-        self.builder.add_to_group(grp, stock, shares)
+        self.builder.add_to_group(grp, stock, int(shares))

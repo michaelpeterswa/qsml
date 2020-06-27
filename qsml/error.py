@@ -11,4 +11,4 @@ class QSMLError(Exception):
     def __str__(self):
         msg = self.message
         line = self.line
-        return "error: %s at line %i" % (msg, line)
+        return "%s at line %i" % (msg, line)

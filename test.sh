@@ -1,4 +1,4 @@
 #!/bin/bash
 # apt-get install python3-pip
 # pip3 install -r requirements.txt
-nose2 --plugin nose2.plugins.junitxml --junit-xml tests
+nose2 --plugin nose2.plugins.junitxml --junit-xml tests --junit-xml-path tests/nose2-junit.xml

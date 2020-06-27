@@ -1,0 +1,2 @@
+Python dictionary returned by the parser using file (example.qsml):
+
