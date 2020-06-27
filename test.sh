@@ -1,2 +1,3 @@
 #!/bin/bash
-python3 -m unittest discover -s ./tests &> test_result.txt
+pip3 install -r requirements.txt
+nose2 --plugin nose2.plugins.junitxml --junit-xml tests

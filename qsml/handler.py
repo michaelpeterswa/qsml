@@ -22,5 +22,14 @@ def load(filename=None):
         raise e
 
 
-def dump(self, filename):
-    pass
+def dump(filename, dict_obj, title="QSML File v1.0"):
+
+    with open(filename, "w+") as outfile:
+        data = "< %s >\n\n" % title
+        for group, collection in dict_obj.items():
+            data += "* %s *\n\n" % group
+            if collection:
+                for sym, amt in collection.items():
+                    data += "\t$ %s : %s\n" % (sym, amt)
+                data += "\n"
+        outfile.write(data)

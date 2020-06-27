@@ -5,4 +5,10 @@ pp = pprint.PrettyPrinter(indent=4)
 
 file = "example.qsml"
 
-pp.pprint(qsml.load(file))
+retval = qsml.load(file)
+
+retval["myportfolio"].update({"NWST": 12})
+
+qsml.dump("output.qsml", retval)
+
+pp.pprint(retval)

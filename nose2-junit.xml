@@ -1,0 +1,8 @@
+<testsuite name="nose2-junit" errors="0" failures="0" skipped="0" tests="2" time="0.002">
+  <testcase time="0.001537" classname="test_load.TestLoad" name="test_load">
+    <system-out />
+  </testcase>
+  <testcase time="0.000365" classname="test_load.TestLoad" name="test_load_comment_error">
+    <system-out />
+  </testcase>
+</testsuite>
