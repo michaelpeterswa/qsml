@@ -22,21 +22,22 @@
   <img alt="GitHub" src="https://img.shields.io/github/license/michaelpeterswa/qsml">
   <a href="https://badge.fury.io/py/qsml"><img src="https://badge.fury.io/py/qsml.svg" alt="PyPI version" height="18"></a>
   <img alt="Made With Love" src="https://img.shields.io/badge/Made%20With-Love-orange.svg">
-  <img alt="Awesome" src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg">
+	<a href="https://plant.treeware.earth/michaelpeterswa/qsml"><img src="https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Plant%20Tree&query=%24.total&url=https%3A%2F%2Fpublic.offset.earth%2Fusers%2Ftreeware%2Ftrees" /></a>
+	<img alt="Awesome" src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg">
 </p>
 # qsml
 
 qsml is a markup language for key value securities (stock name, amount)
 
-> quick securities markup language is a project geared towards listing portfolios for performing data analysis upon
+> quick securities markup language is a project geared towards listing portfolios for later performing data analysis upon
 
 ## Installation
 
 ```
 git clone https://github.com/michaelpeterswa/qsml.git
-
+```
 or
-
+```
 pip3 install qsml
 ```
 
