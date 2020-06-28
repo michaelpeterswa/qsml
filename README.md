@@ -44,13 +44,13 @@ Or download the file manually.
 
 ## Release History
 
-- 1.0.0
+- 1.0.1
   - Opened Repository (06.25.2020)
 
 ## Meta
 
-Michael Peters - _enter additional contact information here_
-
-Distributed under the MIT license. See `LICENSE` for more information.
+Michael Peters - michael@michaelpeterswa.com
        
+## Licence   
+
 This package is [Treeware](https://treeware.earth). If you use it in production, then we ask that you [**buy the world a tree**](https://plant.treeware.earth/michaelpeterswa/qsml) to thank us for our work. By contributing to the Treeware forest you’ll be creating employment for local families and restoring wildlife habitats.
