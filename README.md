@@ -1,11 +1,11 @@
 <h1 align="center">
 	<img
-		width="300"
+		width="400"
 		alt="QSML"
 		src="img/qsml_2.png">
 </h1>
 <h3 align="center">
-	qsml is a markup language for securities by symbol and amount of shares)
+	qsml is a markup language for securities by symbol and amount of shares
 </h3>
 <p align="center">
 	<strong>
