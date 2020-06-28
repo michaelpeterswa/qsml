@@ -25,11 +25,12 @@
 	<a href="https://plant.treeware.earth/michaelpeterswa/qsml"><img src="https://img.shields.io/badge/dynamic/json?color=brightgreen&label=Plant%20Tree&query=%24.total&url=https%3A%2F%2Fpublic.offset.earth%2Fusers%2Ftreeware%2Ftrees" /></a>
 	<img alt="Awesome" src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg">
 </p>
-# qsml
-
-qsml is a markup language for key value securities (stock name, amount)
-
-> quick securities markup language is a project geared towards listing portfolios for later performing data analysis upon
+<h1 align="center">
+	<img
+		width="400"
+		alt="QSML"
+		src="img/qsml_code.png">
+</h1>
 
 ## Installation
 
